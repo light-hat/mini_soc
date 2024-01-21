@@ -5,3 +5,7 @@ hosts:
       username: wazuh-wui
       password: "MyS3cr37P450r.*-"
       run_as: false
+
+customization.logo.sidebar: "custom/images/customization.logo.sidebar.png?v=1705844589155"
+customization.logo.app: "custom/images/customization.logo.app.png?v=1705844576020"
+customization.logo.healthcheck: "custom/images/customization.logo.healthcheck.png?v=1705844582965"
