@@ -59,6 +59,8 @@ services:
       - SSL_KEY=/etc/ssl/filebeat.key
       - API_USERNAME=wazuh-wui
       - API_PASSWORD=MyS3cr37P450r.*-
+    #env_file:
+    #  - ./.env.siem.manager
     volumes:
       - wazuh_api_configuration:/var/ossec/api/configuration
       - wazuh_etc:/var/ossec/etc
@@ -86,6 +88,8 @@ services:
       - "OPENSEARCH_JAVA_OPTS=-Xms1024m -Xmx1024m"
       - INDEXER_USERNAME=admin
       - INDEXER_PASSWORD=SecretPassword
+    #env_file:
+    #  - ./.env.siem.indexer
     ulimits:
       memlock:
         soft: -1
@@ -119,6 +123,8 @@ services:
       - DASHBOARD_PASSWORD=kibanaserver
       - API_USERNAME=wazuh-wui
       - API_PASSWORD=MyS3cr37P450r.*-
+    #env_file:
+    #  - ./.env.siem.dashboard
     volumes:
       - ./config/wazuh_indexer_ssl_certs/wazuh.dashboard.pem:/usr/share/wazuh-dashboard/certs/wazuh-dashboard.pem
       - ./config/wazuh_indexer_ssl_certs/wazuh.dashboard-key.pem:/usr/share/wazuh-dashboard/certs/wazuh-dashboard-key.pem
@@ -170,7 +176,7 @@ services:
   #     - "<cortex_api_key>"
 
   # cassandra:
-  #   image: 'cassandra:4'
+  #   image: cassandra:4
   #   mem_limit: 1600m
   #   ports:
   #     - "9042:9042"
