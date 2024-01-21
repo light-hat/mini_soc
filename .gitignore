@@ -2,3 +2,5 @@ wazuh_indexer_ssl_certs/
 .env
 .env.db
 *.zip
+*.tar
+*.tar.gz
