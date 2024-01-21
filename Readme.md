@@ -63,3 +63,11 @@ docker-compose up -d --build
 ## Конфигурируем Nginx
 
 TBC...
+
+## Темная тема
+
+`Management > Advanced Setting > "dashboard:defaultDarkTheme"`
+
+## Кастомизация
+
+https://documentation.wazuh.com/current/user-manual/wazuh-dashboard/custom-branding.html
