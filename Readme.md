@@ -44,7 +44,7 @@ docker save -o cortex.tar thehiveproject/cortex:3.1.7
 Отправляем на сервер через SCP:
 
 ```bash
-scp images.zip <user>@192.168.45.132:/home/<user>/images.zip
+scp -P 666 images.zip <user>@192.168.45.132:/home/<user>/images.zip
 ```
 
 Импортируем образы уже на сервере:
